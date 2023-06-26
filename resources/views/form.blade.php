@@ -18,12 +18,18 @@
         @endisset
         <div class="row">
             <div class="col">
-                <input name="name" type="text" value="{{isset($user)? $user->name : null}}" class="form-control" placeholder="name" aria-label="name">
+                <input name="name" type="text" value="{{old('name',isset($user)? $user->name : null) }}" class="form-control" placeholder="name" aria-label="name">
+                @error('name')
+                <div class="alert alert-danger">{{$message}}</div>
+                @enderror
             </div>
         </div>
         <div class="row mt-4">
             <div class="col">
-                <input  value="{{isset($user)? $user->email : null}}" name="email" type="text" class="form-control" placeholder="email" aria-label="email">
+                <input  value="{{old('email',isset($user)? $user->email : null) }}" name="email" type="text" class="form-control" placeholder="email" aria-label="email">
+                @error('email')
+                <div class="alert alert-danger">{{$message}}</div>
+                @enderror
             </div>
         </div>
         <div class="row mt-4">
