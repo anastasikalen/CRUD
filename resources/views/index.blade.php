@@ -3,7 +3,7 @@
 @section('title','Users')
 
 @section('content')
-    <a href="{{route('users.create')}}" class="btn btn-primary" role="button">{{'Create user'}}</a>
+    <a href="{{route('users.create')}}" class="btn btn-primary mb-3" role="button">{{'Create user'}}</a>
     <table class="table table-sm">
         <thead>
         <tr>
